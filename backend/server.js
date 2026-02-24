@@ -15,6 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const __dirname = path.resolve();
 
+app.set("trust proxy", true); // trust Render/proxy forwarded IP headers
 app.use(express.json());
 app.use(cors());
 app.use(
